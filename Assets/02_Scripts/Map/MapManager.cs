@@ -90,7 +90,7 @@ public class MapManager : MonoBehaviour
         {
             ClearMap();
             stage++; StageToEnemySpawnManager();
-            stageTheme = StageTheme.Volcano;  //(StageTheme)Random.Range(0, Enum.GetValues(typeof(StageTheme)).Length);
+            stageTheme = (StageTheme)Random.Range(0, Enum.GetValues(typeof(StageTheme)).Length);
             MapGenerate(stageTheme); //랜덤 맵 테마 선택 후 맵 생성
             SetBossRoom(); //보스룸 선택
             SetShopRoom(sceneName); //상점방 선택
